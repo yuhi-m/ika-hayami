@@ -1,5 +1,5 @@
-// ブキ早見カード Service Worker（build.py が a2235ee9e9 を index.html のハッシュに置き換える）
-const CACHE = 'buki-card-a2235ee9e9';
+// ブキ早見カード Service Worker（build.py が eb36dfa46b を index.html のハッシュに置き換える）
+const CACHE = 'buki-card-eb36dfa46b';
 const FILES = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './icon-maskable-512.png', './apple-touch-icon.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES.map(f => new Request(f, {cache: 'reload'})))).then(() => self.skipWaiting()));
